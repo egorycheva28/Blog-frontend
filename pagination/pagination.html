@@ -1,0 +1,29 @@
+<div class="row align-items-end my-3">
+    <div class="col-auto">
+        <nav aria-label="...">
+
+            <ul class="pagination" id="pagination">
+                <li class="page-item">
+                    <a class="page-link" href="#"  onclick="previousPages()" id="previousPage">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#" onclick="showPage(this)" id="page1">1</a></li>
+                <li class="page-item"><a class="page-link" href="#" onclick="showPage(this)" id="page2">2</a></li>
+                <li class="page-item"><a class="page-link" href="#" onclick="showPage(this)" id="page3">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" onclick="nextPages()" id="nextPage">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="col"></div>
+    <div class="col-auto">
+        <label for="pageSize" class="form-label">Число постов на странице</label>
+        <input type="number" onfocusout="reloadWithNewPageSize(this)" class="form-control" id="pageSize" min="1">
+    </div>
+</div>
+
+<script type="module" src="/pagination/pagination.js"></script>

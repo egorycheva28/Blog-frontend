@@ -1,0 +1,81 @@
+<div class="container">
+    <div class="d-grid justify-content-end my-3">
+        <button type="button" class="btn btn-primary" id="newPost">Написать пост</button>
+    </div>
+    <div class="card shadow-sm my-3" id="filter">
+        <div class="card-header">
+            Фильтры
+        </div>
+        <div class="card-body">
+            <form>
+                <div class="row">
+                    <div class="col">
+                        <label for="authorFilter" class="form-label">Поиск по имени автора</label>
+                        <input type="text" class="form-control" id="authorFilter" name="author">
+                    </div>
+
+                    <div class="col">
+                        <label for="tagFilter" class="form-label">Поиск по тэгам</label>
+                        <select class="form-select" multiple size="3" id="tagFilter" name="tags">
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row mt-3 align-items-end">
+                    <div class="col-4">
+                        <label for="sortFilter" class="form-label">Сортировать</label>
+                        <select class="form-select" id="sortFilter" name="sorting">
+                            <option>—</option>
+                            <option value="CreateDesc">По дате создания (сначала новые)</option>
+                            <option value="CreateAsc">По дате создания (сначала старые)</option>
+                            <option value="LikeDesc">По количеству лайков (по убыванию)</option>
+                            <option value="LikeAsc">По количеству лайков (по возрастанию)</option>
+                        </select>
+                    </div>
+
+                    <div class="col-2">
+                        <label for="readFilter" class="form-label">Время чтения от</label>
+                        <input type="number" class="form-control" id="minReadFilter" min="1" name="min">
+                    </div>
+
+                    <div class="col-2">
+                        <label for="readFilter" class="form-label">Время чтения до</label>
+                        <input type="number" class="form-control" id="maxReadFilter" min="1" name="max">
+                    </div>
+
+                    <div class="col">
+                        <div class="">
+                            <input class="form-check-input" type="checkbox" value="" id="myCommunitiesFilter"
+                                name="onlyMyCommunities">
+                            <label class="form-check-label" for="myCommunitiesFilter">Только мои группы</label>
+                        </div>
+                    </div>
+
+
+                    <div class="col-auto">
+                        <button type="button" class="btn btn-primary mt-3" id="applyFilters">Применить</button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="container" id="postContainer"></div>
+
+    <div class="row">
+        <div class="col-auto">
+            <div class="container" id="paginationContainer"></div>
+        </div>
+
+        <div class="col"></div>
+
+        <div class="col-auto">
+            <label for="size">Число постов на странице</label>
+            <input type="number" class="form-control" id="size" name="size" min="1" value="5" />
+        </div>
+    </div>
+</div>
+
+
+<script type="module" src="/main/main.js"></script>

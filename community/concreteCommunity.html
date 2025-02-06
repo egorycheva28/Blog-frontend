@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="community-container" id="concreteCommunity"></div>
+    <div class="card shadow-sm my-3">
+        <div class="card-header">
+            Фильтры
+        </div>
+        <div class="card-body">
+            <form>
+                <div class="row">
+                    <div class="col-16 col-md-6">
+                        <label for="sortFilter" class="form-label">Сортировать</label>
+                        <select class="form-select" id="sortFilter">
+                            <option>—</option>
+                            <option value="CreateDesc">По дате создания (сначала новые)</option>
+                            <option value="CreateAsc">По дате создания (сначала старые)</option>
+                            <option value="LikeDesc">По количеству лайков (по убыванию)</option>
+                            <option value="LikeAsc">По количеству лайков (по возрастанию)</option>
+                        </select>
+                    </div>
+
+                    <div class="col-16 col-md-6">
+                        <label for="tagFilter" class="form-label">Поиск по тэгам</label>
+                        <select class="form-select" multiple size="3" id="tagFilter">
+                        </select>
+                    </div>
+
+                    <div class="row">
+                        <div class="col"></div>
+                        <div class="col-auto">
+                            <button type="button" class="btn btn-primary mt-3" id="applyFilters">Применить</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="postContainer"></div>
+
+    <div class="row">
+        <div class="col-auto">
+            <div class="container" id="paginationContainer"></div>
+        </div>
+
+        <div class="col"></div>
+
+        <div class="col-auto">
+            <label for="size">Число постов на странице</label>
+            <input type="number" class="form-control" id="size" name="size" min="1" value="5" />
+        </div>
+    </div>
+</div>
+<script type="module" src="/community/concreteCommunity.js"></script>

@@ -1,0 +1,52 @@
+<div class="d-flex container justify-content-center align-items-center" style="min-height: 100vh;">
+    <div class="card shadow" style="width: 30rem;">
+        <div class="card-body">
+            <h3 class="card-title">Регистрация</h3>
+            <form id="formSignUp">
+                <div class=" mb-3">
+                    <label for="nameRegistration" class="form-label">ФИО</label>
+                    <input type="text" class="form-control" id="nameRegistration" placeholder="Иванов Иван Иванович"
+                        name="name" required>
+                    <div class="invalid-feedback" id="nameErrorRegistration"></div>
+                </div>
+                <div class="mb-3">
+                    <label for="dateRegistration" class="form-label">Дата рождения</label>
+                    <input type="date" class="form-control" id="dateRegistration" name="date" required>
+                    <div class="invalid-feedback" id="dateErrorRegistration"></div>
+                </div>
+                <div class="mb-3">
+                    <label for="genderRegistration" class="form-label">Пол</label>
+                    <select class="form-select" id="genderRegistration" name="gender" required>
+                        <option value="male">Мужской</option>
+                        <option value="female">Женский</option>
+                    </select>
+                    <div class="invalid-feedback" id="genderErrorRegistration"></div>
+                </div>
+                <div class="mb-3">
+                    <label for="phoneRegistration" class="form-label">Телефон</label>
+                    <input type="tel" class="form-control" id="phoneRegistration" placeholder="+7 (xxx) xxx-xx-xx"
+                        name="phone" required>
+                    <div class="invalid-feedback" id="phoneErrorRegistration"></div>
+                </div>
+                <div class="mb-3">
+                    <label for="emailRegistration" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="emailRegistration" placeholder="name@example.com"
+                        name="email" required>
+                    <div class="invalid-feedback" id="emailErrorRegistration"></div>
+                    <small id="emailHelp" class="form-text text-muted">Email будет использоваться для входа в
+                        систему</small>
+                </div>
+                <div class="mb-3">
+                    <label for="passwordRegistration" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="passwordRegistration" name="password" required>
+                    <div class="invalid-feedback" id="passwordErrorRegistration"></div>
+                </div>
+            </form>
+            <div class="d-grid gap-2">
+                <button type="button" class="btn btn-primary" id="SignUp">Зарегистрироваться</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="module" src="/registration/registration.js"></script>

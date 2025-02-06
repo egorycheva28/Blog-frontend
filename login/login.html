@@ -1,0 +1,25 @@
+<div class="d-flex container justify-content-center align-items-center" style="min-height: 80vh;">
+    <div class="card shadow" style="width: 30rem;">
+        <div class="card-body">
+            <h3 class="card-title">Вход</h3>
+            <form id="formLogin">
+                <div class="mb-3">
+                    <label for="emailLogin" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="emailLogin" placeholder="name@example.com" required>
+                    <div class="invalid-feedback" id="emailErrorLogin"></div>
+                </div>
+                <div class="mb-3">
+                    <label for="passwordLogin" class="form-label">Пароль</label>
+                    <input type="password" class="form-control" id="passwordLogin" required>
+                    <div class="invalid-feedback" id="passwordErrorLogin"></div>
+                </div>
+            </form>
+            <div class="d-grid gap-2">
+                <button type="button" class="btn btn-primary" id="buttonLogin">Войти</button>
+                <button type="button" class="btn btn-secondary" id="buttonSignUp">Зарегистрироваться</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="module" src="/login/login.js"></script>

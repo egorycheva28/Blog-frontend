@@ -1,0 +1,50 @@
+<div class="container-md mx-auto rounded mt-4 p-3 shadow" style="max-width: 1200px;">
+    <form id="formProfile">
+        <div class="row mb-3">
+            <label for="emailProfile" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-10">
+                <input type="email" class="form-control" id="emailProfile" placeholder="Nexp1e@kreosoft.ru" name="email"
+                    required>
+                <div class="invalid-feedback" id="emailErrorProfile"></div>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="nameProfile" class="col-sm-2 col-form-label">ФИО</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="nameProfile" placeholder="Иванов Иван Иванович" name="name"
+                    required>
+                <div class="invalid-feedback" id="nameErrorProfile"></div>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="phoneProfile" class="col-sm-2 col-form-label">Номер телефона</label>
+            <div class="col-sm-10">
+                <input type="tel" class="form-control" id="phoneProfile" placeholder="+7 (800) 555-35-35" name="phone"
+                    required>
+                <div class="invalid-feedback" id="phoneErrorProfile"></div>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="genderProfile" class="col-sm-2 col-form-label">Пол</label>
+            <div class="col-sm-10">
+                <select class="form-select" id="genderProfile" name="gender" required>
+                    <option value="male">Мужской</option>
+                    <option value="female">Женский</option>
+                </select>
+                <div class="invalid-feedback" id="genderErrorProfile"></div>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="dateProfile" class="col-sm-2 col-form-label">Дата рождения</label>
+            <div class="col-sm-10">
+                <input type="date" class="form-control" id="dateProfile" name="date" required>
+                <div class="invalid-feedback" id="dateErrorProfile"></div>
+            </div>
+        </div>
+    </form>
+    <div class="d-grid gap-2 justify-content-end">
+        <button type="button" class="btn btn-primary disabled" id="Save">Сохранить</button>
+    </div>
+</div>
+
+<script type="module" src="/profile/profile.js"></script>

@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="card shadow-sm my-3">
+        <div class="card-body">
+            <h1>Написать новый пост</h1>
+            <div class="row">
+                <div class="col-9">
+                    <label for="titlePost" class="form-label">Название</label>
+                    <input type="text" class="form-control" id="titlePost">
+                    <div class="invalid-feedback" id="titleError"></div>
+                </div>
+                <div class="col-3">
+                    <label for="timeReadPost" class="form-label">Время чтения</label>
+                    <input type="number" class="form-control" id="timeReadPost" min="1">
+                    <div class="invalid-feedback" id="timeError"></div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-6">
+                    <label for="communityPost" class="form-label">Группа</label>
+                    <select class="form-select" id="communityPost">
+                        <option value="noCommunity">Без группы</option>
+                    </select>
+                </div>
+                <div class="col-6">
+                    <label for="tagsPost" class="form-label">Тэги</label>
+                    <select class="form-select" multiple size="3" id="tagsPost">
+                    </select>
+                    <div class="invalid-feedback" id="tagsError"></div>
+                </div>
+            </div>
+            <div class="mt-3">
+                <label for="imagePost" class="form-label">Ссылка на картинку</label>
+                <input type="text" class="form-control" id="imagePost" min="1">
+                <div class="invalid-feedback" id="imageError"></div>
+            </div>
+            <div class="my-3">
+                <label for="textPost" class="form-label">Текст</label>
+                <input type="text" class="form-control" id="textPost">
+                <div class="invalid-feedback" id="textError"></div>
+            </div>
+            <h2>Адрес</h2>
+            <div id="addressSelects"></div>
+            
+            <div class="row mt-3">
+                <div class="col"></div>
+                <div class="col-auto">
+                    <button class="btn btn-primary" id="createPost">Создать пост</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="module" src="/post/createPost.js"></script>
